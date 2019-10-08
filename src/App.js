@@ -15,6 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App-header">
+        <h1>You can change the status by clicking on the checkbox</h1>
         <Contact
           name="Fatou"
           url={`https://randomuser.me/api/portraits/men/45.jpg`}
