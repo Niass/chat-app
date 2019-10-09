@@ -1,6 +1,6 @@
 import React from "react";
 import "./ContactList.css";
-import Contact from './Contact';
+import Contact from "./Contact";
 function ContactList(props) {
   const users = [
     {
@@ -19,13 +19,13 @@ function ContactList(props) {
       id: "oki8_è",
       first: "Flenn",
       last: "Kuhn",
-      imgSrc:  "https://randomuser.me/api/portraits/thumb/men/80.jpg"
+      imgSrc: "https://randomuser.me/api/portraits/thumb/men/80.jpg"
     },
     {
       id: "ojjk676",
       first: "Marcial",
       last: "Sales",
-      imgSrc:  "https://randomuser.me/api/portraits/thumb/men/97.jpg"
+      imgSrc: "https://randomuser.me/api/portraits/thumb/men/97.jpg"
     },
     {
       id: "-è-GH",
@@ -35,18 +35,19 @@ function ContactList(props) {
     }
   ];
   const arrOnline = [false, true];
-  return (<div className="">
-
-   { users.map(({first, id, imgSrc}) => 
-      <Contact
-      key={id}
-      name={first}
-      id={id}
-      imgSrc={imgSrc}
-      isOnline={arrOnline[Math.round(Math.random() + 1)]}
-      />
-    )}
-  </div>);
+  return (
+    <div className="">
+      {users.map(({ first, id, imgSrc }) => (
+        <Contact
+          key={id}
+          name={first}
+          id={id}
+          imgSrc={imgSrc}
+          isOnline={arrOnline[Math.round(Math.random())]}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default ContactList;
